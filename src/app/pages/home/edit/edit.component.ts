@@ -39,7 +39,6 @@ export class EditComponent extends ListService implements OnInit {
     if (indexItem !== '') {
       this.getListItemFromLocalStorage();
       this.idItem = Number(indexItem);
-      console.log(this.idItem)
     } else {
       this.shareDataService.editItem$.subscribe(index => {
         this.idItem = Number(index);

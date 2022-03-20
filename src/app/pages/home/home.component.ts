@@ -1,6 +1,6 @@
 import { Component, Injector, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { agencyModel } from 'src/app/models/agencias';
+import { Observable } from 'rxjs';
 import { ListService } from 'src/app/services/list-service';
 import { ShareDateService } from 'src/app/services/share-data.service';
 
@@ -12,14 +12,15 @@ import { ShareDateService } from 'src/app/services/share-data.service';
 export class HomeComponent extends ListService implements OnInit {
 
   myItems = ListService.list;
+  apiLoaded: Observable<boolean>;
 
   constructor(
     injector: Injector,
     private activatedRoute: ActivatedRoute,
     private router: Router,
-    private shareDataService: ShareDateService
+    private shareDataService: ShareDateService,
   ) {
-    super(injector)
+    super(injector);
   }
 
   ngOnInit(): void {
@@ -44,6 +45,10 @@ export class HomeComponent extends ListService implements OnInit {
     this.router.navigateByUrl('edit');
     localStorage.setItem('index', JSON.stringify(positionItem));
     this.shareDataService.editedItem(positionItem);
+  }
+
+  viewMap() {
+    this.loadMap();
   }
 
 }

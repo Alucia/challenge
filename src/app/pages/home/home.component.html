@@ -1,6 +1,10 @@
 <header>
   <p>Agencias</p>
 </header>
+<button type="button" class="btn btn-primary" (click)="viewMap()">ver mapa</button>
+
+<div id="divMap"></div>
+
 <div class="container__list">
   <div class="container__list-item" *ngFor="let item of myItems; let i = index" (click)="editItem(i)">
     <div class="d-flex">

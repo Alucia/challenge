@@ -22,7 +22,7 @@ export class HomeResolver extends ListService implements Resolve<any> {
         setTimeout(() => {
           this.splashScreenStateService.stop();
           resolve(of(agencias));
-        }, 1000);
+        }, 5000);
     });
   }
 }
