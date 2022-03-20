@@ -1,0 +1,19 @@
+.container__list-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+  border-bottom: 1px solid #ccc;
+  justify-content: space-between;
+}
+.container__list-item p {
+  margin: 0;
+}
+.item__icon-people {
+  width: 80px;
+  height: 80px;
+  background: #ccc;
+  border-radius: 100%;
+}
+.item__icon-start {
+  width: 20px;
+}

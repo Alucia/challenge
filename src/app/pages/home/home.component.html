@@ -1,0 +1,16 @@
+<header>
+  <p>Agencias</p>
+</header>
+<div class="container__list">
+  <div class="container__list-item" *ngFor="let item of myItems; let i = index" (click)="editItem(i)">
+    <div class="d-flex">
+      <img class="item__icon-people" src="../../../assets/images/icon.png" alt="icon">
+      <div>
+        <p class="fs-5">{{ item.agencia }}</p>
+        <p class="fs-6">{{ item.departamento }}</p>
+        <p class="fs-6 fw-light">{{ item.direccion }}</p>
+      </div>
+    </div>
+    <img class="item__icon-start" src="../../../assets/images/star.webp" alt="start">
+  </div>
+</div>

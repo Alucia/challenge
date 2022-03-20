@@ -1,0 +1,37 @@
+<header>
+  <p>Detalle de Agencia</p>
+</header>
+
+<form class="form__item" [formGroup]="myForm">
+  <span>Nombre de la agencia</span>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Nombre de la agencia" formControlName="nombre" aria-label="nombre">
+  </div>
+
+  <span>Direccion</span>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Direccion" formControlName="direccion" aria-label="direccion">
+  </div>
+
+  <span>Distrito</span>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Distrito" formControlName="distrito" aria-label="distrito">
+  </div>
+
+  <span>Provincia</span>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Provincia" formControlName="provincia" aria-label="provincia">
+  </div>
+
+  <span>Latitud</span>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Latitud" formControlName="latitud" aria-label="latitud">
+  </div>
+
+  <span>Longitud</span>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Longitud" formControlName="longitud" aria-label="longitud">
+  </div>
+
+  <button type="button" class="btn btn-primary" (click)="itemUpdated()">Actualizar</button>
+</form>
